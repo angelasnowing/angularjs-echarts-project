@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.home .header{
+    width: 100%;
+    height: 60px;
+    background-color: #33CC99;
+}
+
+.home .header .name{
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    color: #FFF;
+}
+.home .header .item{
+    list-style: none;
+    font-size: 20px;
+    color: #FFF;
+    position: absolute;
+    right: 10px;
+    width: 480px;
+}
+
+.home .header .item li:nth-child(1){
+    position: absolute;
+    right: 370px;
+    top: 15px;
+}
+
+.home .header .item li:nth-child(2){
+    position: absolute;
+    right: 270px;
+    top: 15px;
+}
+.home .content {
+    display: inline-block;
+    padding: 0 20px 100px 20px;
+   /* width: 100%;
+    min-height: 300px;
+    overflow: hidden;*/
+}
+@media screen and (min-width: 992px){
+    .home .content{
+        padding: 0 100px 100px 100px;
+    }
+}
+
+.home .content .left {
+    padding-top: 10px;
+    margin-top: 70px;
+    display: inline-block;
+    /*margin-left: 20%;*/
+    /*width: 15%;*/
+    /*min-height: 600px;*/
+    /*border: 1px solid #000;*/
+    font-size: 20px;
+    /*margin-bottom: 120px;*/
+}
+.home .content .left  .dirHeader{
+    color: #99a9bf;
+}
+.home .content .left  .dirHeader ul li{
+    margin: 10px 0;
+}
+.home .content .left  .dirHeader ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+}
+.home .content .left  .dirHeader ul li a:hover,.home .content .left  .dirHeader ul li a.active{
+    color:#33CC99;
+}
+.home .content .left ul{
+    list-style: none;
+}
+.home .content .left ul li{
+    padding-left: 10px;
+}
+.home>.content>.left>ul>li{
+    padding-top: 10px;
+}
+.home .content .center {
+    margin-top: 75px;
+    display: inline-block;
+    overflow: auto;
+/*    margin-left: 25px;
+    margin-bottom: 50px;
+    width: 50%;
+    min-height:300px;*/
+    /*border: 1px solid #000;*/
+}
+.home .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #242424;
+}
+
+.home .footer .name{
+    position: absolute;
+    top: 15px;
+    left: 40px;;
+    font-size: 25px;
+    font-weight: 200;
+    color: #777;
+}
+
+.home .footer .name{
+    list-style: none;
+}
+
+.home .footer .item{
+    color: #777;
+    font-size: 15px;
+    list-style: none;
+}
+.home .footer .item li:nth-child(1){
+    position: absolute;
+    bottom: 20px;
+    left: 65px;
+}
+.home .footer .item li:nth-child(2){
+    position: absolute;
+    left: 150px;
+    bottom: 20px;
+}
+.chart{
+    margin-bottom: 20px;
+}
+
+.chart .word-canva {
+    width: 100%;
+}
+.chart .word-canva table{
+    width: 80%;
+    margin: 10px 20px 10px 0px;
+    font-size: 14px;
+}
+.chart .word-canva table th{
+    height: 35px;
+    vertical-align: middle;
+}
+.chart .word-canva table thead th{
+    background: #eee;
+}
+.chart .word-canva table th,td{
+    padding: 10px 20px;
+    border: 1px solid #eee;
+}
+
+.chart h4{
+    text-indent: 10px;
+    margin-bottom: 25px;
+}
+.chart .word-canva h4{
+    margin-top: 40px;
+}
+.chart .code-canva pre{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+.chart .code-canva  code{
+    white-space: nowrap;
+}
+.chart .code-canva .htmlTxt, .jsTxt, code{
+    font-size: 15px;
+    margin-left: -30px;
+    font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+}

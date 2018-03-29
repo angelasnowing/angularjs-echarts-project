@@ -1,0 +1,57 @@
+<div class="chart">
+    <h4>{{headTitle}}</h4>
+    <div class="chart-canva">
+        <wenduji-bar id="test" ng-if="type == 1"></wenduji-bar>
+        <shuiping-bar id="test" ng-if="type == 2"></shuiping-bar>
+        <pubu-bar id="test" ng-if="type == 3"></pubu-bar>
+        <marker-bar id="test" ng-if="type == 4"></marker-bar>
+        <duo-bar id="test" ng-if="type == 5"></duo-bar>
+        <duidie-bar id="test" ng-if="type == 6"></duidie-bar>
+        <pinghua-line id="test" ng-if="type == 7"></pinghua-line>
+        <duozhe-line id="test" ng-if="type == 8"></duozhe-line>
+        <marker-line id="test" ng-if="type == 9"></marker-line>
+        <meigui-pie id="test" ng-if="type == 10"></meigui-pie>
+        <zhihuan-pie id="test" ng-if="type == 11"></zhihuan-pie>
+        <solid-pie id="test" ng-if="type == 12"></solid-pie>
+        <single-gauge id="test" ng-if="type == 13"></single-gauge>
+        <line-bar id="test" ng-if="type == 14"></line-bar>
+        <line-area id="test" ng-if="type == 15"></line-area>
+    </div>
+    <div class="code-canva">
+        <pre>
+            <div class="htmlTxt">
+                chart.html文件：
+                <code>{{labelData}}</code>
+            </div>
+
+            <div class="jsTxt">
+                chart.js文件：
+                <code>{{codeData}}</code>
+            </div>
+
+        </pre>
+    </div>
+    <div class="word-canva">
+        <h4 class="attrs">Input Attributes</h4>
+        <table>
+            <thead>
+                <th nowrap>参数</th>
+                <th nowrap>说明</th>
+                <th nowrap>类型</th>
+                <th nowrap>是否必填</th>
+                <th nowrap>默认值</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="attrs in attrsList">
+                    <td nowrap>{{attrs.param}}</td>
+                    <td nowrap>{{attrs.description}}</td>
+                    <td nowrap>{{attrs.type}}</td>
+                    <td nowrap>{{attrs.isMustHave}}</td>
+                    <td nowrap>{{attrs.defltValue}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+

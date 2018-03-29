@@ -1,0 +1,23 @@
+{
+  "data":{
+    "graphType": "pie",
+    "seriesData": [{
+      "value": 45,
+      "name": "CARD"
+    }, {
+      "value": 25,
+      "name": "SSD"
+    }, {
+      "value": 15,
+      "name": "U盘"
+    }, {
+      "value": 8,
+      "name": "嵌入式"
+    }, {
+      "value": 7,
+      "name": "FLASH"
+    }]
+  }
+}
+
+
