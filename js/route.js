@@ -18,5 +18,10 @@ define(['app'],function(app){
 				templateUrl: 'js/views/chart.html',
 				controller: 'chartCtl'
 			})
+			.state('home.shuoming', {
+				url: '/shuoming',
+				templateUrl: 'js/views/shuoming.html',
+				controller: 'shuomingCtl'
+			})
 	}])
 })

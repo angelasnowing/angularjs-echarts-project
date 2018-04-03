@@ -4,13 +4,6 @@
 
 define(['app'],function(app){
 	return app.controller('indexCtl',['$rootScope','$scope','$http',function($rootScope, $scope, $http){
-        $scope.color1 = ['#EB4848', '#F39494', '#5DC45D', '#A8DFA8'];
-        $scope.data1 = {
-            name: ["已完成投资", "今年计划投资", '累计完成计划'],
-            unit: "亿元",
-            xData: ["青口镇", "青口小城镇指挥部"],
-            yData: [[0.0359, 0.0559],[0.181, 0.581], [19.83, 24.83]]
-        };
         $scope.chartType = "pubu-bar";
         $http({
             method: "POST",

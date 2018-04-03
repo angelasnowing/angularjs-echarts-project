@@ -41,10 +41,6 @@ define(['app', 'echarts'], function(app, echarts){
                     });
                 }
             };
-            /*chartService.setEleColors = function(){
-                var defultColors = ['#00acee', '#52cdd5', '#79d9f1', '#a7e7ff', '#c8efff'];
-                return defultColors;
-            };*/
             return chartService;
     }])
 })

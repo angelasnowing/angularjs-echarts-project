@@ -8,48 +8,90 @@
 	</div>
 	<div class="content col-md-12">
 		<div class="navbar-left left col-md-3 col-sm-12">
+			<ul>开发指南
+				<li class="dirHeader"><a ui-sref="home.shuoming" ng-click="liItemSelect(0)" ng-class="{'true': 'active'}[selectNum == 0]">使用说明</a></li>
+			</ul>
 			<ul>基础指令
 				<li class="dirHeader">bar
 					<ul>
-						<li><a ui-sref="home.chart({id:1})" ng-click="liItem = '1'" ng-class="{'true': 'active'}[liItem == '1']">wenduji-bar 温度计条形图</a></li>
-						<li><a ui-sref="home.chart({id:2})" ng-click="liItem = '2'" ng-class="{'true': 'active'}[liItem == '2']">shuiping-bar 水平向条形图</a></li>
-						<li><a ui-sref="home.chart({id:3})" ng-click="liItem = '3'" ng-class="{'true': 'active'}[liItem == '3']">pubu-bar 瀑布条形图</a></li>
-						<li><a ui-sref="home.chart({id:4})" ng-click="liItem = '4'" ng-class="{'true': 'active'}[liItem == '4']">marker-bar 标注条形图</a></li>
-						<li><a ui-sref="home.chart({id:5})" ng-click="liItem = '5'" ng-class="{'true': 'active'}[liItem == '5']">duo-bar 多组条形图</a></li>
-						<li><a ui-sref="home.chart({id:6})" ng-click="liItem = '6'" ng-class="{'true': 'active'}[liItem == '6']">duidie-bar 堆叠条形图</a></li>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('bar')>=0 && liItemName.name.indexOf('line-bar') < 0"
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="dirHeader">line
 					<ul>
-						<li><a ui-sref="home.chart({id:7})" ng-click="liItem = '7'" ng-class="{'true': 'active'}[liItem == '7']">pinghua-line 平滑曲线图</a></li>
-						<li><a ui-sref="home.chart({id:8})" ng-click="liItem = '8'" ng-class="{'true': 'active'}[liItem == '8']">duozhe-line 多条折线图</a></li>
-						<li><a ui-sref="home.chart({id:9})" ng-click="liItem = '9'" ng-class="{'true': 'active'}[liItem == '9']">marker-line 标注折线图</a></li>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('line')>=0 && liItemName.name.indexOf('line-bar') < 0  && liItemName.name.indexOf('line-area') < 0"
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="dirHeader">pie
 					<ul>
-						<li><a ui-sref="home.chart({id:10})" ng-click="liItem = '10'" ng-class="{'true': 'active'}[liItem == '10']">meigui-pie 玫瑰饼图</a></li>
-						<li><a ui-sref="home.chart({id:11})" ng-click="liItem = '11'" ng-class="{'true': 'active'}[liItem == '11']">zhihuan-pie 指环饼图</a></li>
-						<li><a ui-sref="home.chart({id:12})" ng-click="liItem = '12'" ng-class="{'true': 'active'}[liItem == '12']">solid-pie 实心饼图</a></li>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('pie')>=0"
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="dirHeader">gauge
 					<ul>
-						<li><a ui-sref="home.chart({id:13})" ng-click="liItem = '13'" ng-class="{'true': 'active'}[liItem == '13']">single-gauge 单仪表盘图</a></li>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('gauge')>=0 "
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="dirHeader">line-bar
 					<ul>
-						<li><a ui-sref="home.chart({id:14})" ng-click="liItem = '14'" ng-class="{'true': 'active'}[liItem == '14']">line-bar 折线条形组合图</a></li>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('line-bar')>=0 "
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="dirHeader">line-area
 					<ul>
-						<li><a ui-sref="home.chart({id:15})" ng-click="liItem = '15'" ng-class="{'true': 'active'}[liItem == '15']">line-area 折线面积图</a></li>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('line-area')>=0 "
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
 					</ul>
 				</li>
-				<!--<li class="dirHeader"><a ui-sref="home.chart({id:14})">line-bar</a></li>
-				<li class="dirHeader"><a ui-sref="home.chart({id:15})">line-area</a></li>-->
+				<li class="dirHeader">ciyun-word
+					<ul>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('ciyun-word')>=0 "
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dirHeader">scatter
+					<ul>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('scatter')>=0 "
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<div class="center col-md-9 col-sm-12">

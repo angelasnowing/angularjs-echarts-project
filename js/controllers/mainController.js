@@ -1,1 +1,1 @@
-define(['indexCtl','homeCtl','chartCtl'],function(){})
+define(['indexCtl','homeCtl','chartCtl', 'shuomingCtl'],function(){})

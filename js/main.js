@@ -13,6 +13,7 @@ require.config({
 		'indexCtl':'./controllers/indexCtl',
 		'homeCtl':'./controllers/homeCtl',
         'chartCtl': './controllers/chartCtl',
+        'shuomingCtl': './controllers/shuomingCtl',
 		'mainDirective':'./directives/mainDirective',
 		'geoFactory':'./services/geoFactory',
 		
@@ -43,6 +44,7 @@ require.config({
         'meiguiPieDirective': './directives/meiguiPieDirective',
         'pinghuaLineDirective' : './directives/pinghuaLineDirective',
         'floatScatterDirective': './directives/floatScatterDirective',
+        'huanPieDirective': './directives/huanPieDirective',
         'chartElementDirective': './directives/chartElementDirective',
 	},shim:{
         angular:{

@@ -159,7 +159,7 @@ define(['app', 'echarts'], function(app, echarts){
                 function sortNumber(a, b){
                     return b[1] - a[1];
                 }
-                function setNewDataOption (opt, value){
+                function setNewDataOption(opt, value){
                     var tooltipValue;
                     value.sort(sortNumber).map(function(item){
                         tooltipValue.push(item[1]);
@@ -179,7 +179,7 @@ define(['app', 'echarts'], function(app, echarts){
                     opt.series[0].data = value;
                 }
                 // 静态数据
-               /* if ($scope.datas){
+                if ($scope.datas){
                     $scope.datasArray = eval($scope.datas);
                     if ($scope.datasArray){
                         setNewDataOption(option, $scope.datasArray);
@@ -190,7 +190,7 @@ define(['app', 'echarts'], function(app, echarts){
                     ChartService.setConfigToChart(container, option);
                 }
                 // 从接口获取动态数据
-                attrs.$observe("datas", function(newValue){
+                /*attrs.$observe("datas", function(newValue){
                     if (newValue){
                         var newValueArray = eval(newValue);
                         if (newValueArray){

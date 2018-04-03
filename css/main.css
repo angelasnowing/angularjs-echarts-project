@@ -61,8 +61,12 @@
     font-size: 20px;
     /*margin-bottom: 120px;*/
 }
-.home .content .left  .dirHeader{
+.home .content .left  .dirHeader, .home .content .left  .dirHeader a{
     color: #99a9bf;
+    text-decoration: none;
+}
+.home .content .left .dirHeader:hover{
+    cursor: text;
 }
 .home .content .left  .dirHeader ul li{
     margin: 10px 0;
@@ -73,8 +77,10 @@
     cursor: pointer;
     color: #333;
 }
-.home .content .left  .dirHeader ul li a:hover,.home .content .left  .dirHeader ul li a.active{
+.home .content .left  .dirHeader ul li a:hover,.home .content .left  .dirHeader ul li a.active,
+.home .content .left  .dirHeader a:hover, .home .content .left  .dirHeader a.active{
     color:#33CC99;
+    cursor: pointer;
 }
 .home .content .left ul{
     list-style: none;
@@ -169,9 +175,41 @@
 }
 .chart .code-canva  code{
     white-space: nowrap;
+    padding: 10px 0;
+    color: #7f8c8d;
 }
 .chart .code-canva .htmlTxt, .jsTxt, code{
     font-size: 15px;
     margin-left: -30px;
     font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+}
+
+.shuoming h3{
+    font-weight: normal;
+    color: #1f2f3d;
+}
+.shuoming p{
+    font-size: 17px;
+    color: #5e6d82;
+    line-height: 2.5em;
+}
+.shuoming pre{
+    vertical-align: middle;
+    width: 85%;
+}
+.shuoming code{
+    font-size: 14px;
+    line-height: 0;
+    padding: 10px 0;
+    color: #7f8c8d;
+}
+
+.shuoming p.code-style {
+    font-size: 14px;
+    line-height: 0;
+    display: table-cell;
+}
+
+.shuoming  .code-style1{
+    line-height: 1.8em;
 }

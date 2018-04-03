@@ -18,13 +18,12 @@ define(['app','echarts'], function(app,echarts){
             link: function($scope, element, attrs) {
                 var container, option = new Object();
                 // 设置chart默认data
-                var defaultDatas = [
-                    {name: "研发", value: "666"},
-                    {name: "中国", value: "520"},
-                    {name: "系统", value: "999"},
-                    {name: "征集", value: "888"},
-                    {name: "福州市", value: "777"}
-                ];
+                var defaultDatas = {
+                    data: [{name: "研发", value: "650"}, {name: "中国", value: "520"}, {name: "系统", value: "550"},
+                    {name: "征集", value: "600"}, {name: "福州市", value: "700"},{name: "大数据", value: "650"}, {name: "物联网", value: "520"}, {name: "峰会", value: "550"},
+                        {name: "理想", value: "600"}, {name: "在线", value: "700"},{name: "软件", value: "650"}, {name: "其他", value: "520"}, {name: "环节", value: "550"},
+                        {name: "新常态", value: "600"}, {name: "进程", value: "700"}],
+                    name: "热点分析"};
                 // 设置chart id
                 element.attr("id", attrs.id ? attrs.id : "defultId");
                 // 获取chart图层
@@ -40,16 +39,15 @@ define(['app','echarts'], function(app,echarts){
                             show: true
                         },
                         series: [{
-                            name: '热点分析',
                             type: 'wordCloud',
                             sizeRange: [20, 50],
                             rotationRange: [0, 0],
                             textPadding: 0,
                             autoSize: {
-                                enable: true,
-                                minSize: 6
-                            },
-                            textStyle: {
+                             enable: true,
+                             minSize: 6}
+                            // 任意颜色
+                            /*textStyle: {
                                 normal: {
                                     color:  function() {
                                         return 'rgb(' + [
@@ -59,7 +57,7 @@ define(['app','echarts'], function(app,echarts){
                                             ].join(',') + ')';
                                     }
                                 }
-                            }
+                            }*/
                         }]
                     };
                     myChart.setOption(option);
@@ -67,7 +65,8 @@ define(['app','echarts'], function(app,echarts){
                 initialChartCanvas();
                 // 二次及以上配置chart option数据
                 function setNewDataOption (opt, value){
-                    opt.series[0].data = value;
+                    opt.series[0].data = value.data;
+                    opt.series[0].name = value.name;
                 }
                 // 静态数据
                 if ($scope.datas){
