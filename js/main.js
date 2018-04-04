@@ -24,7 +24,9 @@ require.config({
 
 		//echarts
 		'echarts': './lib/echarts.min',
+        'echartsNew': './lib/echarts',
         'echarts-wordcloud' : './lib/echarts-wordcloud.min',
+        'china': './lib/china',
 		//directive
 		'barDirective': './directives/barDirective',
 		'pubuBarDirective': './directives/pubuBarDirective',
@@ -45,6 +47,7 @@ require.config({
         'pinghuaLineDirective' : './directives/pinghuaLineDirective',
         'floatScatterDirective': './directives/floatScatterDirective',
         'huanPieDirective': './directives/huanPieDirective',
+        'chinaMap': './directives/chinaMapDirective',
         'chartElementDirective': './directives/chartElementDirective',
 	},shim:{
         angular:{

@@ -3,10 +3,10 @@ define(['app'], function(app){
 
         var headTitle = ['温度计条形图', '水平向条形图', '瀑布条形图', '标注条形图', '多组条形图',
             '堆叠条形图', '平滑曲线图', '多条折线图', '标注折线图', '玫瑰饼图', '指环饼图', '实心饼图',
-            '单仪表盘图', '折线条形组合图', '折线面积图', '词云图', '环形饼图'];
+            '单仪表盘图', '折线条形组合图', '折线面积图', '词云图', '环形饼图', '浮动散点图', '中国地图'];
         var labelNameList = ["wenduji-bar", "shuiping-bar", "pubu-bar", "marker-bar", "duo-bar",
             "duidie-bar", "pinghua-line", "duozhe-line", "marker-line", "meigui-pie",
-            "zhihuan-pie", "solid-pie", "single-gauge", "line-bar", "line-area", "ciyun-word", "huan-pie"];
+            "zhihuan-pie", "solid-pie", "single-gauge", "line-bar", "line-area", "ciyun-word", "huan-pie", "float-scatter", "china-map"];
         $scope.attrsList = [
             {param: 'id', description: '图层ID', type: 'string', isMustHave: 'N', defltValue: 'defaultId'},
             {param: 'width', description: '图层宽度', type: 'string/number', isMustHave: 'N', defltValue: '500px'},
@@ -25,7 +25,7 @@ define(['app'], function(app){
             $scope.attrsList.push({param: 'yAxisNameLeft', description: '图层左侧y轴标注文字', type: 'string', isMustHave: 'N', defltValue: ''},
                 {param: 'yAxisNameRight', description: '图层右侧y轴标注文字', type: 'string', isMustHave: 'N', defltValue: ''});
         }
-        if ($scope.type == 16){
+        if ($scope.type == 16 || $scope.type == 18 || $scope.type == 19){
             $scope.attrsList.map(function(item, index){
                 item.param == 'unit' ? $scope.attrsList.splice(index, 1) : null;
             })
@@ -92,6 +92,10 @@ define(['app'], function(app){
             $scope.codeData = "data1 = { name: '热点分析', data: [{name: '研发', value: '650'}, {name: '中国', value: '520'}, {name: '系统', value: '550'},{name: '征集', value: '600'}, {name: '福州市', value: '700'},{name: '大数据', value: '650'}, {name: '物联网', value: '520'}, {name: '峰会', value: '550'},{name: '理想', value: '600'}, {name: '在线', value: '700'},{name: '软件', value: '650'}, {name: '其他', value: '520'}, {name: '环节', value: '550'},{name: '新常态', value: '600'}, {name: '进程', value: '700'}]}";
         }else if($scope.type == 17){
             $scope.codeData = "data1 = [{name: '中立评价', value: 50}, {name: '正面评价', value: 70}, {name: '负面评价', value: 90}]";
+        }else if($scope.type == 18){
+            $scope.codeData = "data1 = [[1,2,'aa'], [2,90, 'bb'], [3, 12,'cc'], [4,7, 'dd'], [5,30,'ee']]";
+        }else if ($scope.type == 19){
+            $scope.codeData = "data1 = {name: '总人口',data: [{name: '福州市', value: 39623.85},{name: '洛阳市', value: 39623.85},{name: '厦门市', value: 39623.85}]}";
         }
         $scope.labelData = "<" + labelName + " " + "id='test1' width='500' height='500' datas='{{data1}}'></" + labelName + ">";
     })

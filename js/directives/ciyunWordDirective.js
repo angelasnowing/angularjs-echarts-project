@@ -1,3 +1,14 @@
+/**
+ * duidieBarDirective created on 2018/3/20.
+ * @ param [id] is the id of the echarts div
+ * @ param [width] is width of the echarts div
+ * @ param [height] is height of the echarts div
+ * @ param [datas] is data of the echarts div, with array data of name, xData and yData
+ * @ param [colors] is color of the echarts div, with array data
+ * @ param [clickEventFlag]
+ * @ param [clickSdata]
+ * @ param [clickRdata]
+ */
 define(['app','echarts'], function(app,echarts){
     app.directive('ciyunWord', function(ChartService){
         return{

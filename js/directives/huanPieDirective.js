@@ -1,125 +1,15 @@
-/*define(['app', 'echarts'], function(app, echarts){
-    app.directive('pies', function(){
-        return {
-            // 隔离作用域: '='传变量
-            scope: {
-                // 获取数据
-                datas: '@',
-                // 获取id
-                id:'=',
-                width: '=',
-                height: '='
-            },
-            restrict: 'E',
-            template: '<div style="float: left"></div>',
-            replace: true,
-            link: function($scope, element, attrs){
-                // 传入id
-                element.attr("id", $scope.id);
-                // 传入width和height
-                if ($scope.width){
-                    element.css({width:$scope.width});
-                } else {
-                    element.css({width:'400px'});
-                }
-                if ($scope.height){
-                    element.css({height:$scope.height});
-                } else {
-                    element.css({height:'370px'});
-                }
-                // 获取绘图位置
-                var myChart = echarts.init(document.getElementById(attrs.id));
-                var rich = {
-                    yellow: {
-                        padding: [5, 4],
-                        align: 'center'
-                    },
-                    total: {
-                        align: 'center'
-                    },
-                    white: {
-                        align: 'center',
-                        padding: [21, 0]
-                    },
-                    blue: {
-                        align: 'center'
-                    },
-                    hr: {
-                        borderColor: '#0b5263',
-                        width: '100%',
-                        borderWidth: 1,
-                        height: 0
-                    }
-                }
-                // 初始绘图
-                var option = {
-                    // 传入颜色
-                    color: ['#6aba23', '#eec23b','#f18556', '#f4485e', '#ef769f', '#d293ee', '#68a8f2',
-                        '#408eff', '#9a9eaa', '#16cbdb', '#3e26f1', '#85e200', '#24d3b0', '#8dbc70',
-                        '#b95663', '#ef98d0', '#00a7de', '#a8883a', '#976a56', '#716bbd'],
-                    tooltip: {
-                        trigger: 'item',
-                        formatter: "{b}: {c} ({d}%)"
-                    },
-                    series: [
-                        {
-                            type:'pie',
-                            radius: ['35%', '53%'],
-                            avoidLabelOverlap: true,
-                            label: {
-                                normal: {
-                                    show: true,
-                                    textStyle: {
-                                        fontSize: '15'
-                                    }/!*,
-                                     rich: rich*!/
-                                }
-                            },
-                            labelLine: {
-                                normal: {
-                                    show: true
-                                }
-                            },
-                            // 传入数据
-                            data: $scope.datas
-                        }
-                    ]
-                };
-                myChart.setOption(option);
-                // datas变化的绘图方式
-                $scope.datasChart = function (plotChartData){
-                    var myChart = echarts.getInstanceByDom(document.getElementById(attrs.id));
-                    option.series[0].data = plotChartData;
-                    $scope.length =  plotChartData.length;
-                    /!*option.series[0].label.normal.rich = rich;*!/
-                    option.series[0].label.normal.formatter = function(params, ticket, callback){
-                        var total = 0;
-                        var percent = 0;
-                        plotChartData.forEach(function(value, index, array) {
-                            total += parseInt(value.value);
-                        });
-                        percent = ((params.value / total) * 100).toFixed(1);
-                        if (percent == "NaN"){
-                            return params.name + '\n' + params.value;
-                        }else{
-                            return params.name + '\n' + '(' +params.value + ')\n'+ percent + '%';
-                        }
-                    }
-
-                    myChart.setOption(option);
-                };
-
-                // 监听datas变化
-                attrs.$observe('datas', function(newValue){
-                    if (newValue){
-                        var newValueJSON = JSON.parse(newValue);
-                        $scope.datasChart(newValueJSON);
-                    }
-                }, true);
-            }
-        }
-    })
-});*/
+/**
+ * lineAreaDirective created on 2018/3/20.
+ * @ param [id] is the id of the echarts div
+ * @ param [width] is width of the echarts div
+ * @ param [height] is height of the echarts div
+ * @ param [datas] is data of the echarts div, with array data of name, xData and yData
+ * @ param [colors] is color of the echarts div, with array data
+ * @ param [unit] is unit of the yAxis and tooltip, a data of string type
+ * @ param [clickEventFlag]
+ * @ param [clickSdata]
+ * @ param [clickRdata]
+ */
 define(['app', 'echarts'], function(app, echarts){
     app.directive('huanPie', function(ChartService){
         return {

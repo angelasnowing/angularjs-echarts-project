@@ -52,6 +52,16 @@
 						</li>
 					</ul>
 				</li>
+				<li class="dirHeader">scatter
+					<ul>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('scatter')>=0 "
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
+					</ul>
+				</li>
 				<li class="dirHeader">line-bar
 					<ul>
 						<li ng-repeat="liItemName in liItemList track by $index">
@@ -82,10 +92,10 @@
 						</li>
 					</ul>
 				</li>
-				<li class="dirHeader">scatter
+				<li class="dirHeader">china-map
 					<ul>
 						<li ng-repeat="liItemName in liItemList track by $index">
-							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('scatter')>=0 "
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('china-map')>=0 "
 							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
 								{{liItemName.name}}
 							</a>

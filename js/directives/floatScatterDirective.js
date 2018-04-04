@@ -1,5 +1,13 @@
 /**
- * 气泡图
+ * duidieBarDirective created on 2018/3/20.
+ * @ param [id] is the id of the echarts div
+ * @ param [width] is width of the echarts div
+ * @ param [height] is height of the echarts div
+ * @ param [datas] is data of the echarts div, with array data of name, xData and yData
+ * @ param [colors] is color of the echarts div, with array data
+ * @ param [clickEventFlag]
+ * @ param [clickSdata]
+ * @ param [clickRdata]
  */
 define(['app', 'echarts'], function(app, echarts){
     app.directive('floatScatter', function(ChartService){
@@ -22,7 +30,7 @@ define(['app', 'echarts'], function(app, echarts){
                 var container, option = new Object();
                 // 设置chart默认data
                 var defaultDatas =
-                    [[1,2,"aa"], [2,90, "bb"], [3, 12,"cc"], [4,7, "dd"], [5,30,"ee"]];
+                    [[1,2,"aa"], [2,90, "bb"], [3, 12,"cc"], [4,7, "dd"], [5,30,"ee"], [6, 5, "ff"]];
                 var schema = [
                     {name: 'popularity', index: 0, text: '热度'},
                     {name: 'topicTitle', index: 1, text: '事件标题'}
@@ -36,7 +44,7 @@ define(['app', 'echarts'], function(app, echarts){
                 // 初始化chart图层
                 function initialChartCanvas(){
                     var myChart = echarts.init(container);
-                    var tooltip_unit = attrs.unit ? attrs.unit : '';
+                    //var tooltip_unit = attrs.unit ? attrs.unit : '';
                     option = {
                         color: attrs.colors ? eval(attrs.colors) : ChartService.setEleColors(),
                         grid: {
@@ -49,12 +57,7 @@ define(['app', 'echarts'], function(app, echarts){
                             padding: 10,
                             backgroundColor: '#222',
                             borderColor: '#777',
-                            borderWidth: 1,
-                            /*formatter: function (obj) {
-                             var value = obj.value;
-                             return value[2] + '<br>'
-                             + schema[0].text + '：' + value[1] + '<br>';
-                             }*/
+                            borderWidth: 1
                         },
                         xAxis: {
                             type: 'value',
@@ -65,7 +68,6 @@ define(['app', 'echarts'], function(app, echarts){
                         },
                         yAxis: {
                             type: 'value',
-                            //name: '热度',
                             show: false,
                             splitLine: {
                                 show: false
@@ -116,7 +118,7 @@ define(['app', 'echarts'], function(app, echarts){
                                     color: '#fff'
                                 },
                                 inRange: {
-                                    color: ['#dd4444', '#fec42c', '#80F1BE', $scope.colors],
+                                    color: ['#dd4444', '#fec42c', '#80F1BE'],
                                     colorLightness: [0.5, 0.5]
                                 },
                                 outOfRange: {
@@ -134,21 +136,7 @@ define(['app', 'echarts'], function(app, echarts){
                         ],
                         series: [
                             {
-                                type: 'scatter',
-                                // 传入数据
-                                /*data: function(){
-                                    if ($scope.datasArray){
-                                        $scope.datasArray.map(function(item, index){
-                                            item = item.slice();
-                                            return item;
-                                        })
-                                    }
-                                },*/
-                                /*itemStyle: {
-                                    normal: {
-                                        color: $scope.colors
-                                    }
-                                }*/
+                                type: 'scatter'
                             }
                         ]
                     };
@@ -160,17 +148,16 @@ define(['app', 'echarts'], function(app, echarts){
                     return b[1] - a[1];
                 }
                 function setNewDataOption(opt, value){
-                    var tooltipValue;
+                    var tooltipValue = new Array();
                     value.sort(sortNumber).map(function(item){
                         tooltipValue.push(item[1]);
                     });
                     opt.tooltip.formatter = function (obj,index) {
-                        console.log(obj, "obj", value, "value");
                         var value_temp = obj.value;
                         var valueIndex = parseInt(index.substring(8));
                         return value_temp[2] + '<br>'
                             + schema[0].text + '：' + tooltipValue[valueIndex] + '<br>';
-                    }
+                    };
                     // 将数据映射到气泡图里
                     value.map(function(item, index){
                         item[1] = opt.visualMap[0].inRange.symbolSize[1] - 10*index;
@@ -190,7 +177,7 @@ define(['app', 'echarts'], function(app, echarts){
                     ChartService.setConfigToChart(container, option);
                 }
                 // 从接口获取动态数据
-                /*attrs.$observe("datas", function(newValue){
+                attrs.$observe("datas", function(newValue){
                     if (newValue){
                         var newValueArray = eval(newValue);
                         if (newValueArray){
@@ -198,7 +185,7 @@ define(['app', 'echarts'], function(app, echarts){
                             ChartService.setConfigToChart(container, option);
                         }
                     }
-                });*/
+                });
                 // 配置动态颜色
                 attrs.$observe("colors", function(newValue){
                     if (newValue){
