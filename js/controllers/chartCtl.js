@@ -83,7 +83,7 @@ define(['app'], function(app){
         if($scope.type == 10){
             $scope.codeData = "data1 = null"
         }else if($scope.type == 11){
-            $scope.codeData = "data1 = [{value: 300, name: '年度计划投资'}, {value: 50, name: ''}], [{value: 60, name: '年累计完成投资'}, {value: 150, name: ''}],[{value: 20, name: '本月投资'}, {value: 80, name: ''}] ]"
+            $scope.codeData = "data1 = [ [{value: 300, name: '年度计划投资'}, {value: 50, name: ''}], [{value: 60, name: '年累计完成投资'}, {value: 150, name: ''}],[{value: 20, name: '本月投资'}, {value: 80, name: ''}] ]"
         }else if($scope.type == 12){
             $scope.codeData = "data1 = { name: '全县项目进展情况', data: [{value: 335, name: '直接访问'},{value: 310, name: '邮件营销'},{value: 234, name: '联盟广告'},{value: 135, name: '视频广告'},{value: 1548, name: '搜索引擎'}]}"
         }else if($scope.type == 13){
