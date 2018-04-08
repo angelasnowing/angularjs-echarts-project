@@ -1,0 +1,17 @@
+{
+  "name": "angular-echarts-for-project",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "shixiaoying <137270366@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/angelasnowing/angularjs-echarts-project-test-test",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
