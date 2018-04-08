@@ -10,8 +10,16 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "index.html", 
+    "gulpfile.js", 
+    "css", 
+    ".idea",
+     "js/*.js", 
+     "js/*.json",
+     "js/views",
+     "js/controllers", 
+     "js/filter", 
+     "js/lib", 
+     "js/views"
   ]
 }
