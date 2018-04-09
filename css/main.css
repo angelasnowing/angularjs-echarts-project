@@ -213,3 +213,8 @@
 .shuoming  .code-style1{
     line-height: 1.8em;
 }
+
+.home .footer .item li a{
+    text-decoration: none;
+    color: inherit;
+}

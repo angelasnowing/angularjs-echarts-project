@@ -68,7 +68,6 @@ define(['app', 'echarts'], function(app, echarts){
                 // 初始化chart图层
                 function initialChartCanvas(){
                     var myChart = echarts.init(container);
-                    //var tooltip_unit = attrs.unit ? attrs.unit : '';
                     attrs.colors = ['#9966cc', '#9966cc', '#9966cc', '#9966cc', '#9966cc',
                         '#CD7054', '#CD7054', '#CD7054', '#CD7054', '#CD7054',
                         '#8FBC8F', '#8FBC8F', '#8FBC8F', '#8FBC8F', '#8FBC8F',

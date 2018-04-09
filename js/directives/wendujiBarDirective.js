@@ -40,7 +40,7 @@ define(['app', 'echarts'], function(app,echarts){
                 // 获取chart图层
                 container = attrs.id ? document.getElementById(attrs.id): document.getElementById("defultId");
                 // 设置宽度和高度
-                ChartService.setEleWaH(container, attrs.width ? attrs.width : '500px', attrs.height ? attrs.height : '500px');
+                ChartService.setEleWaH(container, attrs.width ? attrs.width : '500px', attrs.height ? attrs.height: '500px');
                 // 设置chart默认颜色
                 function setNewColorOption(opt, value){
                     opt.color = value;

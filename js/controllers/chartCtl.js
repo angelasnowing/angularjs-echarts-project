@@ -81,7 +81,13 @@ define(['app'], function(app){
             $scope.codeData = "data1= { name:"+ " " + codeDataName + ", xData: " + codeDataXdata + ",yData:" + " "+ codeDataYdata + "}";
         }
         if($scope.type == 10){
-            $scope.codeData = "data1 = null"
+            $scope.codeData = "data1 = {data: [{value: 32,name: '新材料'},{value: 27,name: '新能源'},{value: 17,name: '生物医药'}," +
+                "{value: 17,name: '节能环保'},{value: 13,name: '电子信息'},{value: 12,name: '新一代信息技术'},{value: 30,name: '生命健康'}," +
+                "{value: 15,name: '文化创意'}, {value: 12,name: '现代农业'}, {value: 6,name: '高端装备制造'},{value: 14,name: '现代装备制造'}," +
+                "{value: 25,name: '现代服务业'}, {value: 15,name: '高端装备'}, {value: 15,name: '新装备'},{value: 12,name: '装备制造'}," +
+                "{value: 24,name: '电子商务'}, {value: 34,name: '海洋高技术'}, {value: 13,name: '新能源新材料'},{value: 10,name: '现代物流'}," +
+                "{value: 10,name: '现代制造技术'} ], labelData: [{value: 100, name: '浙江省'},{value: 100, name: '陕西省'}," +
+                "{value: 100, name: '山东省'},{value: 100, name: '天津市'}]}";
         }else if($scope.type == 11){
             $scope.codeData = "data1 = [ [{value: 300, name: '年度计划投资'}, {value: 50, name: ''}], [{value: 60, name: '年累计完成投资'}, {value: 150, name: ''}],[{value: 20, name: '本月投资'}, {value: 80, name: ''}] ]"
         }else if($scope.type == 12){

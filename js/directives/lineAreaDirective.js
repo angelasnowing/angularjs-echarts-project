@@ -87,13 +87,13 @@ define(['app', 'echarts'], function(app, echarts){
                            {
                                type:'line',
                                areaStyle: {normal: {
-                                   color: attrs.colors? attrs.colors : ChartService.setEleColors()[0]
+                                   color: attrs.colors? eval(attrs.colors)[0] : ChartService.setEleColors()[0]
                                }}
                            },
                            {
                                type:'line',
                                areaStyle: {normal: {
-                                   color: attrs.colors? attrs.colors : ChartService.setEleColors()[0]
+                                   color: attrs.colors? eval(attrs.colors)[1] : ChartService.setEleColors()[1]
                                }}
                            },
                        ]
