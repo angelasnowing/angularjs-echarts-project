@@ -3,7 +3,7 @@
 		<div class="name col-md-8">Anuglarjs-echarts</div>
 		<ul class="item col-md-4">
 			<li id="guide"><a ui-sref="home.shuoming" ng-click="liItemSelect(0)" ng-class="{'true': 'active', 'false': ''}[selectNum == 0]">开发指南</a></li>
-			<li id="directives"><a ui-sref="home.chart({id:1})" ng-click="liItemSelect(1)" ng-class="{'true': 'active', 'false': ''}[selectNum == 1]">基础指令</a></li>
+			<li id="directives"><a ui-sref="home.chart({id:1})" ng-click="liItemSelect(1)" ng-class="{'true': 'active', 'false': ''}[selectNum != 0]">基础指令</a></li>
 		</ul>
 	</div>
 	<div class="content col-md-12">
