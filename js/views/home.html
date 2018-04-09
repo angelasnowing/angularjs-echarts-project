@@ -2,16 +2,16 @@
 	<div class="header col-md-12">
 		<div class="name col-md-8">Anuglarjs-echarts</div>
 		<ul class="item col-md-4">
-			<li>开发指南</li>
-			<li>基础指令</li>
+			<li id="guide"><a ui-sref="home.shuoming" ng-click="liItemSelect(0)" ng-class="{'true': 'active', 'false': ''}[selectNum == 0]">开发指南</a></li>
+			<li id="directives"><a ui-sref="home.chart({id:1})" ng-click="liItemSelect(1)" ng-class="{'true': 'active', 'false': ''}[selectNum == 1]">基础指令</a></li>
 		</ul>
 	</div>
 	<div class="content col-md-12">
 		<div class="navbar-left left col-md-3 col-sm-12">
-			<ul>开发指南
-				<li class="dirHeader"><a ui-sref="home.shuoming" ng-click="liItemSelect(0)" ng-class="{'true': 'active'}[selectNum == 0]">使用说明</a></li>
+			<ul id="develop-guide">开发指南
+				<li class="dirHeader"><a ui-sref="home.shuoming" ng-click="liItemSelect(0)" ng-class="{'true': 'active'}[selectNum == 0]" name="shuoming">使用说明</a></li>
 			</ul>
-			<ul>基础指令
+			<ul id="basic-directives">基础指令
 				<li class="dirHeader">bar
 					<ul>
 						<li ng-repeat="liItemName in liItemList track by $index">
@@ -112,7 +112,7 @@
 		<div class="name">Anuglarjs echarts - 0.1.0</div>
 		<ul class="item">
 			<li><a href="https://github.com/angelasnowing/angularjs-echarts-project-test-test/issues" target="_blank">反馈建议</a></li>
-			<li><a href="">贡献指南</a></li>
+			<li><a href="https://github.com/angelasnowing/angularjs-echarts-project-test-test/graphs/contributors" target="_blank">贡献指南</a></li>
 		</ul>
 	</div>
 </div>

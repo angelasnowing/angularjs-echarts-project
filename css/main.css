@@ -26,16 +26,23 @@
     width: 480px;
 }
 
-.home .header .item li:nth-child(1){
+.home .header .item li:nth-child(1) a{
     position: absolute;
     right: 370px;
     top: 15px;
+    text-decoration: none;
+    color: #FFF;
 }
 
-.home .header .item li:nth-child(2){
+.home .header .item li:nth-child(2) a{
     position: absolute;
     right: 270px;
     top: 15px;
+    text-decoration: none;
+    color: #FFF;
+}
+.home .header .item li a.active, .home .header .item li a:hover{
+    color: #7EFF8C;
 }
 .home .content {
     display: inline-block;

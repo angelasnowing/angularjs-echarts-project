@@ -26,5 +26,19 @@ define(['app'],function(app){
 		$scope.liItemSelect = function(index){
 			$scope.selectNum = index;
 		}
+		/*var top1, top2, height1;
+		window.addEventListener("mousewheel", function(){
+            top1 = $("#develop-guide").offset().top;
+            top2 = $("#basic-directives").offset().top;
+            height1 = $(document).scrollTop();
+            if (height1 <= top2){
+                $("#guide a").css("color","#7EFF8C");
+                $("#directives a").css("color","#fff");
+            }else{
+                $("#guide a").css("color","#fff");
+                $("#directives a").css("color","#7EFF8C");
+            }
+        })*/
+
 	}])
 })
