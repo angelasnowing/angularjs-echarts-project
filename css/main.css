@@ -43,6 +43,7 @@
 }
 .home .header .item li a.active, .home .header .item li a:hover{
     color: #7EFF8C;
+    /*color: black;*/
 }
 .home .content {
     display: inline-block;
