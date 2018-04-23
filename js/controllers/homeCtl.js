@@ -20,7 +20,9 @@ define(['app'],function(app){
             {name: "line-area"+ " " + "折线面积图", id: 15},
             {name: "ciyun-word" + " " + "词云图", id: 16},
             {name: "float-scatter" + " " + "浮动散点图", id: 18},
-            {name: "china-map" + " " + "中国地图", id: 19}
+            {name: "china-map" + " " + "中国地图", id: 19},
+            {name: "funnel" + " " + "漏斗图", id: 20},
+            {name: "relation-link" + " " + "关系图", id: 21}
 			];
 		// 选择导航列表时点亮文字
 		$scope.liItemSelect = function(index){

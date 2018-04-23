@@ -15,8 +15,9 @@ define(['app', 'echarts'], function(app, echarts){
                 },
                 // 设置宽度和高度
                 setEleWaH: function(ele, widthValue, heightValue){
-                    ele.style.width = widthValue.indexOf('px') ? widthValue : widthValue + 'px';
-                    ele.style.height = widthValue.indexOf('px') ? heightValue : heightValue + 'px';
+                    var value1 = widthValue;
+                    ele.style.width = value1.indexOf('px') >= 0 ? value1 : value1 + 'px';
+                    ele.style.height = heightValue.indexOf('px') ? heightValue : heightValue + 'px';
                 },
                 // 二次及以上配置option到chart
                 setConfigToChart: function(container, opt){

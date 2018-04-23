@@ -102,6 +102,26 @@
 						</li>
 					</ul>
 				</li>
+				<li class="dirHeader">funnel
+					<ul>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('funnel')>=0 "
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dirHeader">relation-link
+					<ul>
+						<li ng-repeat="liItemName in liItemList track by $index">
+							<a ui-sref="home.chart({id:liItemName.id})" ng-if="liItemName.name.indexOf('relation-link')>=0 "
+							   ng-click="liItemSelect(liItemName.id)" ng-class="{ 'true' : 'active', 'false': ' '}[selectNum == liItemName.id]">
+								{{liItemName.name}}
+							</a>
+						</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<div class="center col-md-9 col-sm-12">

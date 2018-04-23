@@ -3,10 +3,12 @@ define(['app'], function(app){
 
         var headTitle = ['温度计条形图', '水平向条形图', '瀑布条形图', '标注条形图', '多组条形图',
             '堆叠条形图', '平滑曲线图', '多条折线图', '标注折线图', '玫瑰饼图', '指环饼图', '实心饼图',
-            '单仪表盘图', '折线条形组合图', '折线面积图', '词云图', '环形饼图', '浮动散点图', '中国地图'];
+            '单仪表盘图', '折线条形组合图', '折线面积图', '词云图', '环形饼图', '浮动散点图', '中国地图',
+            '漏斗图', '关系图'];
         var labelNameList = ["wenduji-bar", "shuiping-bar", "pubu-bar", "marker-bar", "duo-bar",
             "duidie-bar", "pinghua-line", "duozhe-line", "marker-line", "meigui-pie",
-            "zhihuan-pie", "solid-pie", "single-gauge", "line-bar", "line-area", "ciyun-word", "huan-pie", "float-scatter", "china-map"];
+            "zhihuan-pie", "solid-pie", "single-gauge", "line-bar", "line-area", "ciyun-word", "huan-pie", "float-scatter",
+            "china-map", "funnel", "relation-link"];
         $scope.attrsList = [
             {param: 'id', description: '图层ID', type: 'string', isMustHave: 'N', defltValue: 'defaultId'},
             {param: 'width', description: '图层宽度', type: 'string/number', isMustHave: 'N', defltValue: '500px'},
@@ -25,7 +27,7 @@ define(['app'], function(app){
             $scope.attrsList.push({param: 'yAxisNameLeft', description: '图层左侧y轴标注文字', type: 'string', isMustHave: 'N', defltValue: ''},
                 {param: 'yAxisNameRight', description: '图层右侧y轴标注文字', type: 'string', isMustHave: 'N', defltValue: ''});
         }
-        if ($scope.type == 16 || $scope.type == 18 || $scope.type == 19){
+        if ($scope.type == 16 || $scope.type == 18 || $scope.type == 19 || $scope.type == 20 || $scope.type == 21){
             $scope.attrsList.map(function(item, index){
                 item.param == 'unit' ? $scope.attrsList.splice(index, 1) : null;
             })
@@ -102,6 +104,17 @@ define(['app'], function(app){
             $scope.codeData = "data1 = [[1,2,'aa'], [2,90, 'bb'], [3, 12,'cc'], [4,7, 'dd'], [5,30,'ee']]";
         }else if ($scope.type == 19){
             $scope.codeData = "data1 = {name: '总人口',data: [{name: '福州市', value: 39623.85},{name: '洛阳市', value: 39623.85},{name: '厦门市', value: 39623.85}]}";
+        }else if ($scope.type == 20){
+            $scope.codeData = "data1 = [{value:100, name:'展现'}, {value:80, name:'点击'}, {value:60, name:'访问'}, {value:40, name:'咨询'},{value:20, name:'订单'}]";
+        }else if ($scope.type == 21){
+            $scope.codeData = "data1 = data: [{name: '男生', category: male}, // 0{name: '女生', category: female}, // 1{name: 'Tom', category: female}, // 2{name: 'Dee', category: female}, " +
+                "// 3{name: 'Tom Gay', category: female}, // 4{name: 'Tom Gay King', category: female}, // 5{name: 'Tom Gay Queen', category: female}, // 6{name: 'Tom Gay Two-Way', category: female}, " +
+                "// 7{name: 'Gay King', category: male}, // 8{name: 'Gay Queen', category: male}, // 9{name: 'Boat', category: male}, // 10{name: 'Bite', category: female}, // 11{name: 'Lesbian', category: female}, " +
+                "// 12{name: 'Kathoey', category: male}, // 13{name: 'Adam', category: male}, // 14{name: 'Angie', category: male}, // 15{name: 'Cherry', category: female}, // 16{name: '三样', category: female} // 17]," +
+                "link: [{source: 0, target: 1},{source: 1, target: 0},{source: 2, target: 1},{source: 2, target: 3},{source: 3, target: 1},{source: 3, target: 2},{source: 4, target: 1},{source: 4, target: 2}," +
+                "{source: 4, target: 3},{source: 5, target: 2},{source: 5, target: 4},{source: 5, target: 6},{source: 6, target: 2},{source: 6, target: 4},{source: 6, target: 5},{source: 7, target: 2},{source: 7, target: 4}," +
+                "{source: 7, target: 5},{source: 7, target: 6},{source: 8, target: 0},{source: 9, target: 0},{source: 10, target: 1},{source: 10, target: 8},{source: 10, target: 9},{source: 11, target: 0},{source: 11, target: 2}," +
+                "{source: 12, target: 1},{source: 14, target: 2},{source: 15, target: 2},{source: 16, target: 8},{source: 16, target: 9},{source: 16, target: 13},{source: 17, target: 0},{source: 17, target: 1},{source: 17, target: 13}]";
         }
         $scope.labelData = "<" + labelName + " " + "id='test1' width='500' height='500' datas='{{data1}}'></" + labelName + ">";
     })

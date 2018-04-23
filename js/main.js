@@ -48,6 +48,8 @@ require.config({
         'floatScatterDirective': './directives/floatScatterDirective',
         'huanPieDirective': './directives/huanPieDirective',
         'chinaMap': './directives/chinaMapDirective',
+        'funnelDirective': './directives/funnelDirective',
+        'relationLinkDirective': './directives/relationLinkDirective',
         'chartElementDirective': './directives/chartElementDirective',
 	},shim:{
         angular:{

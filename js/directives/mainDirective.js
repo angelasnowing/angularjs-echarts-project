@@ -5,5 +5,6 @@ define(['barDirective', 'pubuBarDirective', 'chartElementDirective',
     'singleGaugeDirective', 'lineBarDirective', 'shuipingBarDirective',
     'duidieBarDirective', 'duoBarDirective', 'ciyunWordDirective',
     'duozheLineDirective', 'meiguiPieDirective', 'pinghuaLineDirective',
-    'floatScatterDirective', 'huanPieDirective', 'chinaMap'
+    'floatScatterDirective', 'huanPieDirective', 'chinaMap', 'funnelDirective',
+    'relationLinkDirective'
 ],function(){})
