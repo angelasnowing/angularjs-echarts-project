@@ -149,6 +149,16 @@ define(['app', 'echarts'],function(app, echarts){
                         }
                     });
                 }
+                // tooltip的show或hide
+                function chartTipSaH(){
+                    var myChartElem = echarts.getInstanceByDom(container), opt = new Object();
+                    myChartElem.on('mouseover', function(params){
+                        opt = myChartElem.getOption();
+                        opt.tooltip[0].show = params.dataIndex == 1? 0 : 1;
+                        myChartElem.setOption(opt);
+                    });
+                }
+                chartTipSaH();
             }
         }
     });
