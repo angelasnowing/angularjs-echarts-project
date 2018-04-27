@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background: #eee;
+}
 @media (min-width: 992px){
     .home .header{
         width: 100%;
@@ -147,14 +150,15 @@
 }
 
 .home .content .left {
-    padding-top: 10px;
+    padding-top: 15px;
     margin-top: 70px;
     display: inline-block;
     /*margin-left: 20%;*/
     /*width: 15%;*/
     /*min-height: 600px;*/
-    /*border: 1px solid #000;*/
+    background: #fff;
     font-size: 20px;
+    padding-left: 25px;
     /*margin-bottom: 120px;*/
 }
 .home .content .left  .dirHeader, .home .content .left  .dirHeader a{
@@ -188,14 +192,16 @@
     padding-top: 10px;
 }
 .home .content .center {
+    margin-left: 75px;
     margin-top: 75px;
+    padding: 20px 0 15px 25px;
     display: inline-block;
     overflow: auto;
 /*    margin-left: 25px;
     margin-bottom: 50px;
     width: 50%;
     min-height:300px;*/
-    /*border: 1px solid #000;*/
+    background: #fff;
 }
 .home .footer {
     position: fixed;
