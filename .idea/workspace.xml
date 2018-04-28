@@ -33,9 +33,11 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="296">
+              <caret line="289" column="20" lean-forward="false" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="20" />
+              <folding>
+                <element signature="e#1905#2822#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,9 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dataStyle</find>
-      <find>optionDataSet</find>
-      <find>setEleDatas</find>
       <find>placeHolderStyle</find>
       <find>ChartService</find>
       <find>getSource</find>
@@ -169,6 +168,9 @@
       <find>left</find>
       <find>htmlTxt</find>
       <find>center</find>
+      <find>#eee</find>
+      <find>#fff</find>
+      <find>pre</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -432,12 +434,12 @@
       <workItem from="1524192504026" duration="9147000" />
       <workItem from="1524446812567" duration="7672000" />
       <workItem from="1524726871787" duration="858000" />
-      <workItem from="1524818653791" duration="3841000" />
+      <workItem from="1524818653791" duration="6083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234169000" />
+    <option name="totallyTimeSpent" value="236411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -835,9 +837,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="296">
+          <caret line="289" column="20" lean-forward="false" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="20" />
+          <folding>
+            <element signature="e#1905#2822#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
