@@ -11,7 +11,6 @@ body {
         height: 60px;
         background-color: #33CC99;
     }
-
     .home .header .name{
         position: absolute;
         left: 80px;
@@ -93,7 +92,7 @@ body {
     }
 }
 
-@media (max-width: 705px){
+/*@media (max-width: 705px){
     .home .header{
         width: 200%;
         height: 60px;
@@ -135,7 +134,7 @@ body {
     .home .header .item li a.active, .home .header .item li a:hover{
         color: #7EFF8C;
     }
-}
+}*/
 .home .content {
     display: inline-block;
     padding: 0 20px 100px 20px;
@@ -148,7 +147,6 @@ body {
         padding: 0 100px 100px 100px;
     }
 }
-
 .home .content .left {
     margin-top: 70px;
     display: inline-block;
@@ -158,6 +156,9 @@ body {
     background: #fff;
     font-size: 20px;
     padding: 20px 20px 20px 25px;
+    -webkit-box-shadow:inset 0 0 5px #888;
+    -moz-box-shadow:inset 0 0 5px #888;
+    box-shadow:inset 0 0 5px #888;
     /*margin-bottom: 120px;*/
 }
 .home .content .left  .dirHeader, .home .content .left  .dirHeader a{
@@ -191,15 +192,14 @@ body {
     padding-top: 10px;
 }
 .home .content .center {
-    margin-left: 75px;
+    /*margin-left: 10px;*/
     margin-top: 75px;
     padding: 20px 0 35px 25px;
     display: inline-block;
     overflow: auto;
-/*    margin-left: 25px;
-    margin-bottom: 50px;
-    width: 50%;
-    min-height:300px;*/
+    -webkit-box-shadow:inset 0 0 5px #888;
+    -moz-box-shadow:inset 0 0 5px #888;
+    box-shadow:inset 0 0 5px #888;
     background: #fff;
 }
 .home .footer {
@@ -243,10 +243,9 @@ body {
 }
 
 .chart .word-canva {
-    width: 100%;
 }
 .chart .word-canva table{
-    width: 80%;
+    /*width: 80%;*/
     margin: 10px 20px 10px 0px;
     font-size: 14px;
 }
@@ -258,8 +257,15 @@ body {
     background: #eee;
 }
 .chart .word-canva table th,td{
-    padding: 10px 20px;
+    padding: 1% 2%;
     border: 1px solid #eee;
+    text-align: center;
+}
+.chart .word-canva table td{
+    /*overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;*/
 }
 
 .chart h4{
